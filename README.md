@@ -1,33 +1,38 @@
-# AI-NLP-Chatbot
+Here's a rewritten version of the provided text:
 
-An NLP based Chatbot over a simple fully connected neural network architecture using Tensorflow and tflearn. Trained over a custom dataset specified in the JSON file.
+---
 
-## Prerequisites
+This project features an NLP-based chatbot implemented using a simple fully connected neural network with TensorFlow and TFLearn. The chatbot is trained on a custom dataset specified in a JSON file.
 
-Run **`pip install -r requirements.txt`** in your terminal to install all required libraries
+**Prerequisites:**
+To get started, you need to install all the required libraries. Run the following command in your terminal:
+```bash
+pip install -r requirements.txt
+```
 
-## Dataset
+**Dataset:**
+The `dataset.json` file contains the intents that the model is trained on. Each sentence pattern and corresponding response is assigned a specific tag. The model classifies input sentences based on these tags and provides a random response associated with the correct tag. You can modify the JSON file to suit your specific needs.
 
-The **`dataset.json`** contains the intents on which the model is trained. Each pattern (sentence) and response is given a particular tag. The model classifies each input sentence under a tag and gives out a random answer corresponding to that tag. The json file can be formatted according to the user's requirements.
+**PyAudio:**
+For Python versions above 3.6, PyAudio isn't directly supported via `pip install pyaudio` and must be installed in a different way.
 
-## PyAudio
-
-In Python versions above 3.6 PyAudio is not a supported library and installing PyAudio directly using <br>`pip install pyaudio` fails and needs to be installed separately.<br>
-
-* Windows <br>
-  For that, individually install the wheel file given (this is for Python 3.7, find suitable wheel files [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio)) writing the following line in your terminal.<br> 
-  **`pip  install <.wh file name>`**
-
-* Ubuntu/Linux <br> 
-  **`$ sudo apt-get install python3-pyaudio`**
-
-## Execute Code
-
-  *  Run **`trainModel.py`** to train the Fully Connected Network on the dataset. You can change the number of epochs or layers accordingly, the current architecture gave good results with a ~95% accuracy on predicting tags.
+- **Windows:** 
+  Find the appropriate wheel file for your Python version (e.g., for Python 3.7) and install it using:
+  ```bash
+  pip install <.whl file name>
+  ```
   
-  *  Run **`textChatbot.py`** for text based chatbot with GUI incorporated
-  *  Run **`voiceBot.py`** for voice recognition based chatbot  
+- **Ubuntu/Linux:**
+  You can install PyAudio using:
+  ```bash
+  sudo apt-get install python3-pyaudio
+  ```
 
-## GUI Snippet
+**Executing the Code:**
+- To train the model, run `trainModel.py`. You can adjust the number of epochs or layers as needed. The current architecture achieves approximately 95% accuracy in predicting tags.
+  
+- Use `textChatbot.py` to run the text-based chatbot with a GUI.
 
-<img src=img/gui.png>
+- Use `voiceBot.py` for a voice recognition-based chatbot.
+
+---  
