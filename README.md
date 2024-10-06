@@ -1,7 +1,3 @@
-Here's a rewritten version of the provided text:
-
----
-
 This project features an NLP-based chatbot implemented using a simple fully connected neural network with TensorFlow and TFLearn. The chatbot is trained on a custom dataset specified in a JSON file.
 
 **Prerequisites:**
